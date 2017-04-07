@@ -29,7 +29,7 @@ db.once('open', () => {
 // define routers
 let index = require('./routes/index'); // top level routes
 let polldb = require('./routes/polldb'); // routes for polldb
-let pollview = require('./polldb/pollview'); // routes for pollview
+
 
 let app = express();
 
