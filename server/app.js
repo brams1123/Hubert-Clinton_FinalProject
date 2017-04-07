@@ -59,6 +59,7 @@ app.use(passport.session());
 // route redirects
 app.use('/', index);
 app.use('/polldb', polldb);
+app.use('/pollview', pollview);
 
 // Passport User Configuration
 let UserModel = require('./models/users');

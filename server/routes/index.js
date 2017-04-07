@@ -29,9 +29,9 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.get('/q1', (req, res, next) => {
-    res.render('polldb/q1', {
-        title: 'q1',
+router.get('/pollview', (req, res, next) => {
+    res.render('polldb/pollview', {
+        title: 'pollview',
         polldb: '',
         displayName: req.user ? req.user.displayName : ''
     });
