@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background-image: url("images\heli.jpg");
+    background-image: url("../images/heli.jpg");
     margin: 0
 }
 
