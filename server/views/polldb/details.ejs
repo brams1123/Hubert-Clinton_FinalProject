@@ -7,28 +7,23 @@
           <h1><%= title %></h1>
             <form class="form" method="post">
               <div class="form-group">
-                <label for="NameTextField">Question</label>
+                <label for="NameTextField">Name</label>
                 <input type="text" class="form-control" id="NameTextField"
-                placeholder="Question" name="question" value="<%= polldb.question %>" required>
+                placeholder="Contact Name" name="name" value="<%= contactlist.name %>" required>
               </div>
               <div class="form-group">
-                <label for="CostTextField">Option1</label>
+                <label for="CostTextField">Phone</label>
                 <input type="text" class="form-control" id="CostTextField"
-                placeholder="Option1" name="option1" value="<%= polldb.option1 %>"  required>
+                placeholder="Contact Phone" name="phone" value="<%= contactlist.phone %>"  required>
               </div>
               <div class="form-group">
-                <label for="RatingTextField">Option2</label>
+                <label for="RatingTextField">Email</label>
                 <input type="text" class="form-control" id="RatingTextField"
-                placeholder="Option2" name="option2" value="<%= polldb.option2 %>"  required>
-              </div>
-              <div class="form-group">
-                <label for="RatingTextField">Option3</label>
-                <input type="text" class="form-control" id="RatingTextField"
-                placeholder="Option3" name="option3" value="<%= polldb.option3 %>"  required>
+                placeholder="Contact email" name="email" value="<%= contactlist.email %>"  required>
               </div>
 
               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/polldb" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <a href="/contactlist" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
             </form>
         </div>
       </div>
