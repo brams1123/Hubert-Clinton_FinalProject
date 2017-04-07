@@ -1,0 +1,22 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h3>
+                    what do you think about the new resident evil?
+                </h3
+                <hr>
+                <form action="">
+                <input type="radio" name="option1" value="male"> Great<br><br>
+                <input type="radio" name="option2" value="female"> Not Sure<br><br>
+                <input type="radio" name="option3" value="other"> Not Great<br><br>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+                <a href="/polldb" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <% include ../partials/footer.ejs %>

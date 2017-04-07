@@ -29,6 +29,15 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/q1', (req, res, next) => {
+    res.render('polldb/q1', {
+        title: 'q1',
+        polldb: '',
+        displayName: req.user ? req.user.displayName : ''
+    });
+});
+
+
 // GET /login - render the login view
 router.get('/login', (req, res, next) => {
     // check to see if the user is not already logged in
