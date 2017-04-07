@@ -50,9 +50,10 @@ router.get('/add', requireAuth, (req, res, next) => {
 router.post('/add', requireAuth, (req, res, next) => {
 
     let newGame = game({
-        "name": req.body.name,
-        "phone": req.body.phone,
-        "email": req.body.email
+        "question": req.body.question,
+        "option1": req.body.option1,
+        "option2": req.body.option2,
+        "option3": req.body.option3
     });
 
     game.create(newGame, (err, game) => {
@@ -99,9 +100,10 @@ router.post('/:id', requireAuth, (req, res, next) => {
 
     let updatedGame = game({
         "_id": id,
-        "name": req.body.name,
-        "phone": req.body.phone,
-        "email": req.body.email
+        "question": req.body.question,
+        "option1": req.body.option1,
+        "option2": req.body.option2,
+        "option3": req.body.option3
     });
 
     game.update({ _id: id }, updatedGame, (err) => {

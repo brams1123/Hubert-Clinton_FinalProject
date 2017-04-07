@@ -8,32 +8,11 @@
                 <a href="/polldb/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Poll</a>
                 <br>
                 <table class="table table-bordered table-striped table-hover">
-                    <tr>
-                        <th class="text-center">Name</th>
-                        <th class="text-center">Phone</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center"></th>
-                        <th class="text-center"></th>
-                    </tr>
                     <!-- Template Row -->
                     <% for (let count = 0; count < polldb.length; count++) { %>
                         <tr>
                             <td class="text-center">
-                                <%= polldb[count].name %>
-                            </td>
-                            <td class="text-center">
-                                <%= polldb[count].phone %>
-                            </td>
-                            <td class="text-center">
-                                <%= polldb[count].email %>
-                            </td>
-                            <td class="text-center">
-                                <a href="/polldb/<%= polldb[count]._id %>" class="btn btn-primary">
-                                    <i class="fa fa-pencil-square-o"></i> Edit</a>
-                            </td>
-                            <td class="text-center">
-                                <a href="/polldb/delete/<%= polldb[count]._id %>" class="btn btn-danger">
-                                    <i class="fa fa-trash-o"></i> Delete</a>
+                                <%= polldb[count].question %>
                             </td>
                         </tr>
                         <% } %>
