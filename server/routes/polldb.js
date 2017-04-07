@@ -28,7 +28,7 @@ router.get('/', requireAuth, (req, res, next) => {
             return console.error(err);
         } else {
             res.render('polldb/index', {
-                title: 'polldb',
+                title: 'poll',
                 polldb: polldb,
                 displayName: req.user.displayName
             });
