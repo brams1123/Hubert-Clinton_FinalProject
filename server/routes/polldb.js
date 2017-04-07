@@ -46,7 +46,7 @@ router.get('/add', requireAuth, (req, res, next) => {
     });
 });
 
-// POST process the Game Details page and create a new Game - CREATE
+// POST process the Poll page and create a new poll scenario - CREATE
 router.post('/add', requireAuth, (req, res, next) => {
 
     let newGame = game({
@@ -66,7 +66,7 @@ router.post('/add', requireAuth, (req, res, next) => {
     });
 });
 
-// GET the Game Details page in order to edit a new Game
+// Get details of poll added
 router.get('/:id', requireAuth, (req, res, next) => {
 
     try {
