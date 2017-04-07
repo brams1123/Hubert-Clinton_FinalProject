@@ -4,8 +4,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
-          <h3>contactlist List </h3>
-          <a href="/contactlist/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Contact</a>
+          <h3>polldb List </h3>
+          <a href="/polldb/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Contact</a>
           <br>
           <table class="table table-bordered table-striped table-hover">
             <tr>
@@ -16,17 +16,17 @@
               <th class="text-center"></th>
             </tr>
             <!-- Template Row -->
-            <% for (let count = 0; count < contactlist.length; count++) { %>
+            <% for (let count = 0; count < polldb.length; count++) { %>
             <tr>
-              <td class="text-center"><%= contactlist[count].name %></td>
-              <td class="text-center"><%= contactlist[count].phone %></td>
-              <td class="text-center"><%= contactlist[count].email %></td>
+              <td class="text-center"><%= polldb[count].name %></td>
+              <td class="text-center"><%= polldb[count].phone %></td>
+              <td class="text-center"><%= polldb[count].email %></td>
               <td class="text-center">
-              <a href="/contactlist/<%= contactlist[count]._id %>" class="btn btn-primary">
+              <a href="/polldb/<%= polldb[count]._id %>" class="btn btn-primary">
               <i class="fa fa-pencil-square-o"></i> Edit</a>
                </td>
               <td class="text-center">
-              <a href="/contactlist/delete/<%= contactlist[count]._id %>" class="btn btn-danger">
+              <a href="/polldb/delete/<%= polldb[count]._id %>" class="btn btn-danger">
               <i class="fa fa-trash-o"></i> Delete</a>
               </td>
             </tr>
