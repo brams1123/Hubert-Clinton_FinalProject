@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
     <!-- CSS SECTION -->
     <link rel="stylesheet" href="/Scripts/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Scripts/lib/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/Scripts/lib/font-awesome/css/font-awesome.min.css">
     <link rel='stylesheet' href='/Content/app.css' />
-  </head>
-  <body>
+</head>
 
-  <nav class="navbar navbar-inverse" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+<body>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><i class="fa fa-bar-chart"></i> H&C Poll</a>
-    </div>
-    
-    <ul class="nav navbar-nav navbar-right">
-    <% if(typeof displayName == 'string' && displayName) { %>
-          <li class="navbar-text"><i class="fa fa-user fa-lg"></i> Welcome, <%= displayName %></li>
-          <li><a href="/logout"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
-        <% } else { %>
-          <li><a href="/login"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
-        <% } %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </nav>
+            <a class="navbar-brand" href="/"><i class="fa fa-bar-chart"></i> H&C Poll</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <% if(typeof displayName == 'string' && displayName) { %>
+                <li class="navbar-text"><i class="fa fa-user fa-lg"></i> Welcome,
+                    <%= displayName %>
+                </li>
+                <li><a href="/"><i class="fa fa-flag fa-lg"></i> Report</a></li>
+                <li><a href="/logout"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                <% } else { %>
+                    <li><a href="/login"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
+                    <% } %>
+        </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
