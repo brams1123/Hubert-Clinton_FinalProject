@@ -28,7 +28,7 @@ db.once('open', () => {
 
 // define routers
 let index = require('./routes/index'); // top level routes
-let contactlist = require('./routes/polldb'); // routes for contactlist
+let polldb = require('./routes/polldb'); // routes for polldb
 
 let app = express();
 
@@ -58,7 +58,7 @@ app.use(passport.session());
 
 // route redirects
 app.use('/', index);
-app.use('/contactlist', contactlist);
+app.use('/polldb', polldb);
 
 // Passport User Configuration
 let UserModel = require('./models/users');
