@@ -7,19 +7,24 @@
           <h1><%= title %></h1>
             <form class="form" method="post">
               <div class="form-group">
-                <label for="NameTextField">Name</label>
+                <label for="NameTextField">Question</label>
                 <input type="text" class="form-control" id="NameTextField"
-                placeholder="Contact Name" name="name" value="<%= polldb.name %>" required>
+                placeholder="Question" name="question" value="<%= polldb.question %>" required>
               </div>
               <div class="form-group">
-                <label for="CostTextField">Phone</label>
+                <label for="CostTextField">Option1</label>
                 <input type="text" class="form-control" id="CostTextField"
-                placeholder="Contact Phone" name="phone" value="<%= polldb.phone %>"  required>
+                placeholder="Option1" name="option1" value="<%= polldb.option1 %>"  required>
               </div>
               <div class="form-group">
-                <label for="RatingTextField">Email</label>
+                <label for="RatingTextField">Option2</label>
                 <input type="text" class="form-control" id="RatingTextField"
-                placeholder="Contact email" name="email" value="<%= polldb.email %>"  required>
+                placeholder="Option2" name="option2" value="<%= polldb.option2 %>"  required>
+              </div>
+               <div class="form-group">
+                <label for="RatingTextField">Option3</label>
+                <input type="text" class="form-control" id="RatingTextField"
+                placeholder="Option3" name="option3" value="<%= polldb.option3 %>"  required>
               </div>
 
               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
