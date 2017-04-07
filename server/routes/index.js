@@ -28,7 +28,7 @@ router.get('/', (req, res, next) => {
         displayName: req.user ? req.user.displayName : ''
     });
 });
-
+//Get pool view
 router.get('/pollview', (req, res, next) => {
     res.render('polldb/pollview', {
         title: 'pollview',
