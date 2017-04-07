@@ -31,12 +31,11 @@ router.get('/', (req, res, next) => {
 //Get pool view
 router.get('/pollview', (req, res, next) => {
     res.render('polldb/pollview', {
-        title: 'pollview',
+        title: 'Pollview',
         polldb: '',
         displayName: req.user ? req.user.displayName : ''
     });
 });
-
 
 // GET /login - render the login view
 router.get('/login', (req, res, next) => {
