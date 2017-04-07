@@ -9,32 +9,24 @@
                 <a href="/polldb/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Poll</a>
                 <hr>
                 <br>
-                <% for (let count = 0; count < polldb.length; count++) { %>
-                    <ul>
-                        <li class="text-center">
-                            <%= polldb[count].question %>
-                        </li>
-                    </ul>
-                    <!--
-            
-            <% for (let count = 0; count < polldb.length; count++) { %>
-            <tr>
-              <td class="text-center"><%= polldb[count].question %></td>
-              <td class="text-center"><%= polldb[count].option1 %></td>
-              <td class="text-center"><%= polldb[count].option2 %></td>
-              <td class="text-center"><%= polldb[count].option3 %></td>
-              <td class="text-center">
-              <a href="/polldb/<%= polldb[count]._id %>" class="btn btn-primary">
-              <i class="fa fa-pencil-square-o"></i> Edit</a>
-               </td>
-              <td class="text-center">
-              <a href="/polldb/delete/<%= polldb[count]._id %>" class="btn btn-danger">
-              <i class="fa fa-trash-o"></i> Delete</a>
-              </td>
-            </tr>
-            -->
-                    <% } %>
-                        </table>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Template Row -->
+                    <% for (let count = 0; count < polldb.length; count++) { %>
+                        <tr>
+                            <td class="text-center">
+                                <%= polldb[count].question %>
+                            </td>
+                            <td class="text-center">
+                                <a href="/polldb/<%= polldb[count]._id %>" class="btn btn-primary">
+                                    <i class="fa fa-pencil-square-o"></i> Edit</a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/polldb/delete/<%= polldb[count]._id %>" class="btn btn-danger">
+                                    <i class="fa fa-trash-o"></i> Delete</a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
             </div>
         </div>
     </div>
