@@ -2,21 +2,31 @@
 
     <!-- MAIN CONTENT -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6">
-          <h3>polldb List </h3>
-          <a href="/polldb/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Contact</a>
-          <br>
-          <table class="table table-bordered table-striped table-hover">
-            <tr>
-              <th class="text-center">Question</th>
-              <th class="text-center">Option1</th>
-              <th class="text-center">Option2</th>
-              <th class="text-center">Option3</th>
-              <th class="text-center"></th>
-              <th class="text-center"></th>
-            </tr>
-            <!-- Template Row -->
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h3>Poll List </h3>
+                <hr>
+                <a href="/polldb/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Poll</a>
+                <hr>
+                <br>
+                <% for (let count = 0; count < polldb.length; count++) { %>
+                    <ul>
+                        <li class="text-center">
+                            <%= polldb[count].question %>
+                        </li>
+                        <li class="text-center">
+                            <%= polldb[count].option1 %>
+                        </li>
+                        <li class="text-center">
+                            <%= polldb[count].option2 %>
+                        </li>
+                        <li class="text-center">
+                            <%= polldb[count].option3 %>
+                        </li>
+                        <li class="text-center">
+                    </ul>
+                    <!--
+            
             <% for (let count = 0; count < polldb.length; count++) { %>
             <tr>
               <td class="text-center"><%= polldb[count].question %></td>
@@ -32,12 +42,11 @@
               <i class="fa fa-trash-o"></i> Delete</a>
               </td>
             </tr>
-            <% } %>
-          </table>
+            -->
+                    <% } %>
+                        </table>
+            </div>
         </div>
-      </div>
     </div>
 
-<% include ../partials/footer.ejs %>
-
-
+    <% include ../partials/footer.ejs %>
