@@ -28,7 +28,7 @@ db.once('open', () => {
 
 // define routers
 let index = require('./routes/index'); // top level routes
-let contactlist = require('./routes/contactlist'); // routes for contactlist
+let contactlist = require('./routes/polldb'); // routes for contactlist
 
 let app = express();
 
