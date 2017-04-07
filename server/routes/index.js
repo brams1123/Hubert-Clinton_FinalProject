@@ -42,7 +42,7 @@ router.get('/login', (req, res, next) => {
         });
         return;
     } else {
-        return res.redirect('/contactlist'); // redirect to polldb list
+        return res.redirect('/polldb'); // redirect to polldb list
     }
 });
 
@@ -66,7 +66,7 @@ router.get('/register', (req, res, next) => {
         });
         return;
     } else {
-        return res.redirect('/contactlist'); // redirect to polldb list
+        return res.redirect('/polldb'); // redirect to polldb list
     }
 });
 
@@ -95,7 +95,7 @@ router.post('/register', (req, res, next) => {
             }
             // if registration is successful
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contactlist');
+                res.redirect('/polldb');
             });
         });
 });
