@@ -23,7 +23,7 @@ function requireAuth(req, res, next) {
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
     res.render('content/index', {
-        title: 'WELCOM TO',
+        title: 'H&C',
         polldb: '',
         displayName: req.user ? req.user.displayName : ''
     });
