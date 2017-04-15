@@ -36,6 +36,14 @@ router.get('/pollview', (req, res, next) => {
         displayName: req.user ? req.user.displayName : ''
     });
 });
+//Get Report 
+router.get('/report', (req, res, next) => {
+    res.render('./polldb/report', {
+        title: 'Report',
+        polldb: '',
+        displayName: req.user ? req.user.displayName : ''
+    });
+});
 // GET /login - render the login view
 router.get('/login', (req, res, next) => {
     // check to see if the user is not already logged in
