@@ -31,7 +31,7 @@ router.get('/', (req, res, next) => {
 //Get pool view
 router.get('/pollview', (req, res, next) => {
     res.render('./polldb/pollview', {
-        title: 'Pollview',
+        title: 'Enter Answer',
         polldb: '',
         displayName: req.user ? req.user.displayName : ''
     });
