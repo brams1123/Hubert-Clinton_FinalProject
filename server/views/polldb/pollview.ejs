@@ -15,24 +15,25 @@
                 <h1>
                     <%= title %>
                 </h1>
+                <table class="table table-bordered table-striped table-hover">
+                    <% for (let count = 0; count < polldb.length; count++) { %>
+                        <tr>
+                            <td class="text-center">
+                                <%= polldb[count].question %>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
                 <form class="form" method="post">
                     <div class="form-group">
-                        <table class="table table-bordered table-striped table-hover">
-                            <% for (let count = 0; count < polldb.length; count++) { %>
-                                <tr>
-                                    <td class="text-center">
-                                        <%= polldb[count].question %>
-                                    </td>
-                                </tr>
-                                <% } %>
-                        </table>
+
                     </div>
                     <div class="form-group">
                         <label for="CostTextField">Enter Answer</label>
                         <input type="text" class="form-control" id="CostTextField" placeholder="Great, Not Sure, Not Great" name="Answer" value="<%= polldb.option %>" required>
                     </div>
-                    <button type="submit" <a href="/report/" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-                    <a href="/report" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+                    <a href="/polldb" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
                 </form>
             </div>
         </div>
