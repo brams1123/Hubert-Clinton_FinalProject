@@ -1,5 +1,5 @@
 <% include ../partials/header.ejs %>
-<!-- Site url = https://hubert-clinton-poll.herokuapp.com/
+    <!-- Site url = https://hubert-clinton-poll.herokuapp.com/
   Author: Hubert Osifo and Clinton Essien
   Filename: details.ejs  
   Description - Describes poll available
@@ -10,25 +10,32 @@
 
     <!-- MAIN CONTENT -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6">
-          <h1><%= title %></h1>
-            <form class="form" method="post">
-              <div class="form-group">
-                <label for="NameTextField">Question</label>
-                <input type="text" class="form-control" id="NameTextField"
-                placeholder="Question" name="question" value="<%= polldb.question %>" required>
-              </div>
-              <div class="form-group">
-                <label for="CostTextField">Option</label>
-                <input type="text" class="form-control" id="CostTextField"
-                placeholder="Great, Not Sure, Not Great" name="option" value="<%= polldb.option %>"  required>
-              </div>
-              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/polldb" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
-            </form>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h1>
+                    <%= title %>
+                </h1>
+                <form class="form" method="post">
+                    <div class="form-group">
+                        <table class="table table-bordered table-striped table-hover">
+                            <% for (let count = 0; count < polldb.length; count++) { %>
+                                <tr>
+                                    <td class="text-center">
+                                        <%= polldb[count].question %>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </table>
+                    </div>
+                    <div class="form-group">
+                        <label for="CostTextField">Option</label>
+                        <input type="text" class="form-control" id="CostTextField" placeholder="Great, Not Sure, Not Great" name="Answer" value="<%= polldb.option %>" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+                    <a href="/polldb" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
 
-<% include ../partials/footer.ejs %>
+    <% include ../partials/footer.ejs %>
