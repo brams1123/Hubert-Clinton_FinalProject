@@ -21,7 +21,7 @@ function requireAuth(req, res, next) {
 }
 
 /* GET polldb List page. READ */
-router.get('/', (req, res, next) => {
+router.get('/index', (req, res, next) => {
     // find all polldb in the polldb collection
     game.find((err, polldb) => {
         if (err) {
